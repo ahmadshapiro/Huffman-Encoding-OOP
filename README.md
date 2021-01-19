@@ -1,6 +1,6 @@
 ﻿Huffman Compression/Decompression
 
-![image](./READMEimg/20.001.png)
+![](./READMEimg/Huffman%20.001.png)
 
 **Ahmad Shapiro**
 
@@ -30,13 +30,13 @@ IMPLEMENTATION
 
 Object Oriented Programming
 
-![](Huffman%20.002.png)
+![](./READMEimg/Huffman%20.002.png)
 
 PROCEDURE
 
 1. Asking the user whether he/she wants to A) Compress or B) Decompress the File/Folder.
 
-![](Huffman%20.003.png)
+![](./READMEimg/Huffman%20.003.png)
 
 2. **Compression**
 
@@ -44,11 +44,11 @@ Reading the file/folder name from the user as an input , it must be in the same 
 
 1. Reading the name which the user wish to save the compressed file with (without any extension “huffman\_compressed” )
 
-![](Huffman%20.004.png)
+![](./READMEimg/Huffman%20.004.png)
 
 2. Huffman\_Encoding object is constructed ,and function “compress” is called with both file name and the compressed file name as parameters , the name of file  to be compressed is passed to the constructor of My\_File object to be operated on , returning it’s content as a string and a dictionary holding the frequency per each character , additional to and “/EOF/” specified delimiter.
 
-![](Huffman%20.005.png)
+![](./READMEimg/Huffman%20.005.png)
 
 3. In the construction of My\_File object , the given path is tested to check whether it’s a file or a folder, if it’s a file, the flag “isFIle” is set to 1 , and the “FileNames” attribute is set to hold the name of the file , if it’s a folder, “isFIle” is set to 0 , and the “FileNames” is constructed as a list holding all of the file names in this folder , along with the folder name at index 0 , if file/folder isn’t found it raise an Exception of **“Target Not Found”**.
 4. After that , function “operate” is called , to operate on file,calling “read\_file” method that reads it’s content , adding the file name at the start of the content , separated from the message by the early specified delimiter **“/EOF/”** , then frequency of character occurrence is calculated on the whole content , except the delimiter is treated as a single character , and added to the final frequency dictionary.
@@ -65,9 +65,9 @@ constructs a single node , and then nodes are pushed into the tree **O(n)** , wh
 value as it’s Huffman Binary Representation.  **O(n lo gn)**
 
 9. After that dictionary is reversed and assigned to the Huffman\_Encoding attribute reverseENC, which means that every value is a key  and it’s corresponding key became a value , we are sure that there’s no repetition in either the key or the values, since huffman encoding produce a unique code for each Character.
-10. Content are being split by **“/EOF/”** and then decoded to bit streams by the use  along with **“/EOF/” encodings , eg : a:001 , b:011 , /EOF/:111 , “ab/EOF/”** → **001011111![](Huffman%20.006.png)**
+10. Content are being split by **“/EOF/”** and then decoded to bit streams by the use  along with **“/EOF/” encodings , eg : a:001 , b:011 , /EOF/:111 , “ab/EOF/”** → **001011111![](./READMEimg/Huffman%20.006.png)**
 
-![](Huffman%20.007.png)
+![](./READMEimg/Huffman%20.007.png)
 
 11. After that , the encoded message is padded with zeros to be modulo 8 = 0 , to be easily converted to bytes without any information loss. .
 11. **Header**
@@ -84,7 +84,7 @@ RESULTS
 
 1. **16 MB Uniformly distributed txt file :-**
 
-![](Huffman%20.008.png)
+![](./READMEimg/Huffman%20.008.png)
 
 Compression Time : 3.14 Seconds .
 
@@ -92,7 +92,7 @@ Compression Ratio : 1.34 , Compressed file is 74.80% of the original . Decompres
 
 2. **Folder ( 16MB Uniform distributed file , 11 MB file , 2 MB file )**
 
-![](Huffman%20.009.png)
+![](./READMEimg/Huffman%20.009.png)
 
 Compression Time : 6.01 seconds
 
@@ -100,7 +100,7 @@ Compression Ratio : 1.62 , Compressed file is 61.89% of the original Decompressi
 
 3. **Given Test File**
 
-![](Huffman%20.010.png)
+![](./READMEimg/Huffman%20.010.png)
 
 Compression Time : 0.15 seconds
 
