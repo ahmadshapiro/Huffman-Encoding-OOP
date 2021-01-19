@@ -1,6 +1,6 @@
 ﻿Huffman Compression/Decompression
 
-![](./READMEimg/20.001.png)
+![image](./READMEimg/20.001.png)
 
 **Ahmad Shapiro**
 
